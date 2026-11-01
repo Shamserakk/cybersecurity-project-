@@ -28,11 +28,11 @@ if menu == "Home":
   st.write("This is the Class 12 Group Project.")
   st.info("Use the sidebar on the left to navigate the portal.")
 
-elif menu == "Login / Sign in":
-    st.title("Login / Sign in")
+elif menu == "Login/Sign in":
+    st.title("Login/Sign in")
     st.write("Person 2 will write the Streamlit text boxes and password checker here.")
 
-elif menu == "Learning Hub":
+elif menu == "Learning":
     st.title("Malware Learning Hub")
     st.write("Learn about Viruses, Worms, Trojans, and Ransomware here.")
 
