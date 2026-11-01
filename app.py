@@ -25,8 +25,8 @@ menu=st.sidebar.radio("Go to:",["Home","Login/Sign in","Learning","Phishing Dril
 #choice if else
 if menu == "Home":
   st.title("Welcome to the Cybersecurity Portal")
-    st.write("This is the Class 12 Group Project.")
-    st.info("Use the sidebar on the left to navigate the portal.")
+  st.write("This is the Class 12 Group Project.")
+  st.info("Use the sidebar on the left to navigate the portal.")
 
 elif menu == "Login / Sign in":
     st.title("Login / Sign in")
