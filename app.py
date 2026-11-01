@@ -14,7 +14,7 @@ st.warning("warning:phishing stimulator")
 #section with button
 st.subheader('1.learning')
 st.write('virus,worms,torjan,ransomware')
-st.button("start") st.button("test")
+st.button("start") 
 
 st.subheader("2.phishing drill")
 st.write("test your skill")
