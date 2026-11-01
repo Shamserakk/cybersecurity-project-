@@ -10,3 +10,8 @@ st.write("Welcome!")
 #g
 st.success("system status:secure")
 st.warning("warning:phishing stimulator")
+
+#section with button
+st.subheader('1.learning')
+st.write('virus,worms,torjan,ransomware')
+st.button("start")
