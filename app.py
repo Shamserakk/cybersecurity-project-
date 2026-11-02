@@ -41,7 +41,7 @@ elif menu == "Learning":
 • Report and Restore: Report the crime to authorities and attempt to wipe the system and restore data from a clean, pre-attack backup.""")
  
   #torjan horse
-   with st.expander("2.Torjan Horse "):
+   #with st.expander("2.Torjan Horse "):
       
 elif menu == "Phishing Drill":
     st.title("Live Phishing Drill")
