@@ -14,7 +14,7 @@ if menu == "Home":
 elif menu == "Login/Sign in":
     st.title("Login/Sign in")
     st.write("hiba login and password strenght checker")
-#ransomware
+
 #torjan horse
 #computer worm
 #computer virus
@@ -24,7 +24,7 @@ elif menu == "Learning":
     
   # 1. Virus
     with st.expander("1.RANSOMWARE  "):
-      st.write("A malicious program that attaches itself to a clean file.")  
+      st.write("A malicious software that locks your computer files or devices and demands a payment to unlock them.")  
      
       # This creates the tabs INSIDE the expander!
       tab1, tab2, tab3 = st.tabs(["What is ransomwares?", "How to protect yourself", "What if..."])
@@ -39,7 +39,10 @@ elif menu == "Learning":
         st.write("""• Isolate the Device: Immediately disconnect the infected computer from the Wi-Fi or local network to stop the virus from spreading.\n
 • Do Not Pay the Ransom: Law enforcement (like the FBI or local cyber authorities) strongly advises against paying, as it funds criminal enterprises and marks you as an easy target.\n
 • Report and Restore: Report the crime to authorities and attempt to wipe the system and restore data from a clean, pre-attack backup.""")
-
+ 
+  #torjan horse
+   with st.expander("2.Torjan Horse "):
+      
 elif menu == "Phishing Drill":
     st.title("Live Phishing Drill")
     st.write("zia fake phishing emails+buttons")
