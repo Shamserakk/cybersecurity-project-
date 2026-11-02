@@ -1,4 +1,5 @@
 import streamlit as st
+from src import auth, stimulator, quiz
 #setiing page
 st.set_page_config(page_title="Cybersecurity E-Learning Portal")
 #side bar
@@ -13,7 +14,7 @@ if menu == "Home":
 
 elif menu == "Login/Sign in":
     st.title("Login/Sign in")
-    st.write("hiba login and password strenght checker")
+    st.write(auth.auth_page())
 
 elif menu == "Learning":
   st.title("Malware Learning Hub")
