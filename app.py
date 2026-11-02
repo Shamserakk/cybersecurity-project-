@@ -20,7 +20,7 @@ elif menu == "Learning":
   st.write("To learn more click on any of the maliciuos program below...")
     
   # 1. Virus
-  with st.expander("1.RANSOMWARE  "):
+  with st.expander("RANSOMWARE  "):
       st.write("A malicious software that locks your computer files or devices and demands a payment to unlock them.")  
       # This creates the tabs INSIDE the expander!
       tab1, tab2, tab3 = st.tabs(["What is ransomwares?", "How to protect yourself", "What if..."])
@@ -36,7 +36,7 @@ elif menu == "Learning":
 • Report and Restore: Report the crime to authorities and attempt to wipe the system and restore data from a clean, pre-attack backup.""")
  
   #torjan horse
-  with st.expander("2.TORJAN HORSE "):
+  with st.expander("TORJAN HORSE "):
      st.write("A Trojan Horse is a fake computer program that tricks you into opening it so hackers can sneak in and steal your data.")
      #tab inside expander
      tab1,tab2,tab3=st.tabs(["What is ransomwares?", "How to protect yourself", "What if..."])
@@ -53,7 +53,7 @@ elif menu == "Learning":
 • Change Your Passwords: Once the device is clean, update your logins from a different, safe device.""")
 
   #computer worm
-  with st.expander("3.COMPUTER WORM "):
+  with st.expander("COMPUTER WORM "):
     st.write("A computer worm is a self-copying virus that automatically crawls from one device to another to slow down networks and damage files.")
     tab1,tab2,tab3=st.tabs(["What is ransomwares?", "How to protect yourself", "What if..."])
     with tab1:
