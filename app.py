@@ -83,6 +83,19 @@ elif menu == "Learning":
       st.write("""• Stop Sharing Files: Do not email files or use USBs, or you will pass the virus to others.\n
 • Run a System Scan: Use your antivirus software to find, trap, and delete the virus.""")
 
+  #phishing
+  with st.expander("PHISHING"):
+    st.write("Phishing is when hackers send fake emails or texts to trick you into stealing your passwords or money.")
+    tab1,tab2,tab3=st.tabs(["What is ransomwares?", "How to protect yourself", "What if..."])
+    with tab1:
+      st.write("""Phishing is a scam where hackers trick you into giving up private information by pretending to be a company or person you trust. Instead of using sneaky code, it tricks human nature. Attackers send fake emails or texts that look exactly like your bank, a streaming service, or a delivery company. They create a false sense of urgency—claiming your account is locked or a package is missing—to scare you into clicking a link and typing your passwords or credit card details into a fake website.""")
+    with tab2:
+      st.write("""• Check the Sender: Look closely at the email address. Scammers use slight typos (like support@paypa1.com instead of paypal.com).\n
+• Ignore the Panic: Be skeptical of messages demanding immediate action or threatening account suspension.\n
+• Type the URL: Never click links inside suspicious emails. Type the official website address directly into your browser.""")
+    with tab3:
+      st.write("""• Change Passwords Fast: If you typed your password into a sketchy page, change it immediately across all accounts.
+• Alert Your Bank: If you shared banking details, call your bank right away to freeze your cards.""")
 
 elif menu == "Phishing Drill":
     st.title("Live Phishing Drill")
