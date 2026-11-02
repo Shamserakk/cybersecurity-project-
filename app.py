@@ -36,7 +36,7 @@ elif menu == "Learning":
 • Report and Restore: Report the crime to authorities and attempt to wipe the system and restore data from a clean, pre-attack backup.""")
  
   #torjan horse
-  with st.expander("TORJAN HORSE "):
+  with st.expander("TROJAN HORSE "):
      st.write("A Trojan Horse is a fake computer program that tricks you into opening it so hackers can sneak in and steal your data.")
      #tab inside expander
      tab1,tab2,tab3=st.tabs(["What is ransomwares?", "How to protect yourself", "What if..."])
