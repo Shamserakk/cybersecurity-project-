@@ -43,8 +43,7 @@ elif menu == "Learning":
      #tab inside expander
      tab1,tab2,tab3=st.tabs(["What is ransomwares?", "How to protect yourself", "What if..."])
      with tab1:
-       st.write("""Trojan Horse (or Trojan) is a harmful computer program that tricks you by pretending to be something safe.\n 
-       Just like the famous wooden horse from Greek history, it hides malicious software inside a disguised file—like a fake game, a helpful software update, or an email attachment. Once you open it, the virus sneaks into your system, allowing hackers to spy on you, steal your passwords, or damage your computer""")
+       st.write("""Trojan Horse (or Trojan) is a harmful computer program that tricks you by pretending to be something safe.Just like the famous wooden horse from Greek history, it hides malicious software inside a disguised file—like a fake game, a helpful software update, or an email attachment. Once you open it, the virus sneaks into your system, allowing hackers to spy on you, steal your passwords, or damage your computer""")
      with tab2:
        st.write("""• Download Safely: Only get apps and files from official, trusted websites.\n
 • Check Attachments: Never open unexpected files from unknown email senders.\n
