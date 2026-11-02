@@ -41,7 +41,7 @@ To make matters worse, modern hackers often use double extortion, meaning they a
       with tab3:
         st.write("""• Isolate the Device: Immediately disconnect the infected computer from the Wi-Fi or local network to stop the virus from spreading.
 • Do Not Pay the Ransom: Law enforcement (like the FBI or local cyber authorities) strongly advises against paying, as it funds criminal enterprises and marks you as an easy target.
-• Report and Restore: Report the crime to authorities and attempt to wipe the system and restore data from a clean, pre-attack backup.")
+• Report and Restore: Report the crime to authorities and attempt to wipe the system and restore data from a clean, pre-attack backup.""")
 
 elif menu == "Phishing Drill":
     st.title("Live Phishing Drill")
