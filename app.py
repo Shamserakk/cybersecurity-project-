@@ -15,8 +15,6 @@ elif menu == "Login/Sign in":
     st.title("Login/Sign in")
     st.write("hiba login and password strenght checker")
 
-#computer worm
-#computer virus
 elif menu == "Learning":
   st.title("Malware Learning Hub")
   st.write("To learn more click on any of the maliciuos program below...")
@@ -53,7 +51,39 @@ elif menu == "Learning":
        st.write("""• Disconnect from Internet: Turn off Wi-Fi immediately to stop hackers from stealing your data.\n
 • Run a Security Scan: Use your antivirus software to find and delete the hidden threat.\n
 • Change Your Passwords: Once the device is clean, update your logins from a different, safe device.""")
-       
+
+  #computer worm
+  with st.expander("3.COMPUTER WORM "):
+    st.write("A computer worm is a self-copying virus that automatically crawls from one device to another to slow down networks and damage files.")
+    tab1,tab2,tab3=st.tabs(["What is ransomwares?", "How to protect yourself", "What if..."])
+    with tab1:
+      st.write("""• Install Updates Immediately: Keep your operating system and apps updated to patch the network flaws worms use to travel.\n
+• Enable Your Firewall: A strong firewall acts as a digital shield, blocking unauthorized traffic and stopping worms from sneaking in.\n
+• Use Modern Antivirus: Ensure your security software is active and capable of scanning network traffic.is a harmful virus that copies itself and spreads automatically from device to device without you doing anything. Unlike a Trojan, which requires you to open it, a worm sneaks in through security loopholes in a network. Once inside, it travels quietly to other connected computers, slowing down networks and damaging files as it goes.""")
+    with tab2:
+      st.write("""• Install Updates Immediately: Keep your operating system and apps updated to patch the network flaws worms use to travel.\n
+• Enable Your Firewall: A strong firewall acts as a digital shield, blocking unauthorized traffic and stopping worms from sneaking in.\n
+• Use Modern Antivirus: Ensure your security software is active and capable of scanning network traffic.""")
+    with tab3:
+      st.write("""• Isolate the Device: Unplug your internet cable or turn off Wi-Fi instantly so the worm cannot spread to your router or other devices in the house.\n
+• Run a Full Scan: Use your antivirus tool to locate and permanently delete the worm.\n
+• Patch the System: Figure out how the worm got in and update that specific software right away.""")
+
+  #computer virus
+  with st.expander("COMPUTER VIRUS"):
+    st.write("A computer virus is a harmful program that hides inside normal files and spreads to other devices only when a user opens or shares the infected file.")
+    tab1,tab2,tab3=st.tabs(["What is ransomwares?", "How to protect yourself", "What if..."])
+    with tab1:
+      st.write("""A computer virus is a harmful program that hitches a ride on safe files and needs you to open it to spread. Unlike a worm (which travels by itself), a virus is lazy—it hides inside an everyday file, like a document or a USB drive. It stays asleep until you click it open. Once activated, it copies itself into your other files, corrupts your data, and hitches a ride to other computers when you share files.""")
+    with tab2:
+      st.write("""• Scan USBs First: Always scan external drives with antivirus software before opening them.\n
+• Avoid Shady Files: Never download attachments or software from unverified websites.\n
+• Run Antivirus: Keep reliable security software running to catch threats before they open.""")
+    with tab3:
+      st.write("""• Stop Sharing Files: Do not email files or use USBs, or you will pass the virus to others.\n
+• Run a System Scan: Use your antivirus software to find, trap, and delete the virus.""")
+
+
 elif menu == "Phishing Drill":
     st.title("Live Phishing Drill")
     st.write("zia fake phishing emails+buttons")
