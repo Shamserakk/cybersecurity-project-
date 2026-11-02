@@ -35,12 +35,11 @@ elif menu == "Learning":
          st.write("""Ransomware is a type of cyberattack that locks you out of your own computer files, devices, or networks. Attackers encrypt your data so you cannot use or access it, and then demand a payment—usually in cryptocurrency—to unlock it.
 To make matters worse, modern hackers often use double extortion, meaning they also steal a copy of your private data and threaten to publish it online if you do not pay.""")
       with tab2:
-         st.write("""• Regular Backups: Keeping isolated, offline backups.
-• Consistent Updates: Patching systems immediately.
+         st.write("""• Regular Backups: Keeping isolated, offline backups.\n• Consistent Updates: Patching systems immediately.\n
 • Multi-Factor Authentication (MFA): Locking down accounts beyond just a password.""")
       with tab3:
-        st.write("""• Isolate the Device: Immediately disconnect the infected computer from the Wi-Fi or local network to stop the virus from spreading.
-• Do Not Pay the Ransom: Law enforcement (like the FBI or local cyber authorities) strongly advises against paying, as it funds criminal enterprises and marks you as an easy target.
+        st.write("""• Isolate the Device: Immediately disconnect the infected computer from the Wi-Fi or local network to stop the virus from spreading.\n
+• Do Not Pay the Ransom: Law enforcement (like the FBI or local cyber authorities) strongly advises against paying, as it funds criminal enterprises and marks you as an easy target.\n
 • Report and Restore: Report the crime to authorities and attempt to wipe the system and restore data from a clean, pre-attack backup.""")
 
 elif menu == "Phishing Drill":
