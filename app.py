@@ -1,20 +1,5 @@
 import streamlit as st
-#sidebar menu
-#st.sidebar.title("MENU")
-#st.sidebar.write("Welcome To Our Portal")
-#main title 
-#st.title("Cybersecurity E-Learning Portal")
-#st.write("Welcome!")
-#
-#st.success("system status:secure")
-#st.warning("warning:phishing stimulator")
-#section with button
-#st.subheader('1.learning')
-#st.write('virus,worms,torjan,ransomware')
-#st.button("start") 
-#st.subheader("2.phishing drill")
-#st.write("test your skill")
-#st.button("drill")"""
+
 
 #setiing page
 st.set_page_config(page_title="Cybersecurity E-Learning Portal")
@@ -25,22 +10,38 @@ menu=st.sidebar.radio("Go to:",["Home","Login/Sign in","Learning","Phishing Dril
 #choice if else
 if menu == "Home":
   st.title("Welcome to the Cybersecurity Portal")
-  st.write("This is the Class 12 Group Project.")
+ # st.write(" Project.")
   st.info("Use the sidebar on the left to navigate the portal.")
 
 elif menu == "Login/Sign in":
     st.title("Login/Sign in")
-    st.write("Person 2 will write the Streamlit text boxes and password checker here.")
-
+    st.write("hiba login and password strenght checker")
+#ransomware
+#torjan horse
+#computer worm
+#computer virus
 elif menu == "Learning":
     st.title("Malware Learning Hub")
-    st.write("Learn about Viruses, Worms, Trojans, and Ransomware here.")
+    st.write("To learn more click on any of the maliciuos program below...")
+    # 1. Virus
+    with st.expander("🦠 1. Computer Virus"):
+      st.write("A malicious program that attaches itself to a clean file.")
+     
+      # This creates the tabs INSIDE the expander!
+      tab1, tab2, tab3 = st.tabs(["How it spreads", "Real Example", "Prevention"])
+    
+      with tab1:
+         st.write("Downloading infected files, sharing USB drives, and opening email attachments.")
+      with tab2:
+         st.write("The Melissa Virus (1999) spread through email and caused $80 million in damage.")
+      with tab3:
+        st.write("Don't download files from untrusted websites. Keep your antivirus updated.")
 
 elif menu == "Phishing Drill":
     st.title("Live Phishing Drill")
-    st.write("Person 3 will design the fake phishing emails and buttons here.")
+    st.write("zia fake phishing emails+buttons")
 
 elif menu == "Quiz":
     st.title("Cybersecurity Quiz")
-    st.write("Person 4 will build the quiz questions and grading system here.")
+    st.write("leena quiz+grading system")
 
