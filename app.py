@@ -30,7 +30,7 @@ elif menu == "Learning":
       tab1, tab2, tab3 = st.tabs(["What is ransomwares?", "How to protect yourself", "What if..."])
     
       with tab1:
-         st.write("""Ransomware is a type of cyberattack that locks you out of your own computer files, devices, or networks.\nAttackers encrypt your data so you cannot use or access it, and then demand a payment—usually in cryptocurrency—to unlock it.\nTo make matters worse, modern hackers often use double extortion, meaning they also steal a copy of your private data and threaten to publish it online if you do not pay.""")
+         st.write("""Ransomware is a type of cyberattack that locks you out of your own computer files, devices, or networks.\n Attackers encrypt your data so you cannot use or access it, and then demand a payment—usually in cryptocurrency—to unlock it.\n To make matters worse, modern hackers often use double extortion, meaning they also steal a copy of your private data and threaten to publish it online if you do not pay.""")
       with tab2:
          st.write("""• Regular Backups: Keeping isolated, offline backups.\n• Consistent Updates: Patching systems immediately.\n
 • Multi-Factor Authentication (MFA): Locking down accounts beyond just a password.""")
