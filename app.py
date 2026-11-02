@@ -18,11 +18,11 @@ elif menu == "Login/Sign in":
 #computer worm
 #computer virus
 elif menu == "Learning":
-    st.title("Malware Learning Hub")
-    st.write("To learn more click on any of the maliciuos program below...")
+  st.title("Malware Learning Hub")
+  st.write("To learn more click on any of the maliciuos program below...")
     
   # 1. Virus
-    with st.expander("1.RANSOMWARE  "):
+  with st.expander("1.RANSOMWARE  "):
       st.write("A malicious software that locks your computer files or devices and demands a payment to unlock them.")  
       # This creates the tabs INSIDE the expander!
       tab1, tab2, tab3 = st.tabs(["What is ransomwares?", "How to protect yourself", "What if..."])
@@ -38,7 +38,7 @@ elif menu == "Learning":
 • Report and Restore: Report the crime to authorities and attempt to wipe the system and restore data from a clean, pre-attack backup.""")
  
   #torjan horse
-   with st.expander("2.Torjan Horse "):
+  with st.expander("2.TORJAN HORSE "):
      st.write("one sentence")
      #tab inside expander
      tab1,tab2,tab3=st.tabs(["What is ransomwares?", "How to protect yourself", "What if..."])
