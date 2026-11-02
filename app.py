@@ -39,7 +39,7 @@ elif menu == "Learning":
  
   #torjan horse
   with st.expander("2.TORJAN HORSE "):
-     st.write("one sentence")
+     st.write("A Trojan Horse is a fake computer program that tricks you into opening it so hackers can sneak in and steal your data.")
      #tab inside expander
      tab1,tab2,tab3=st.tabs(["What is ransomwares?", "How to protect yourself", "What if..."])
      with tab1:
