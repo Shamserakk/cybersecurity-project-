@@ -94,7 +94,7 @@ elif menu == "Learning":
 • Ignore the Panic: Be skeptical of messages demanding immediate action or threatening account suspension.\n
 • Type the URL: Never click links inside suspicious emails. Type the official website address directly into your browser.""")
     with tab3:
-      st.write("""• Change Passwords Fast: If you typed your password into a sketchy page, change it immediately across all accounts.
+      st.write("""• Change Passwords Fast: If you typed your password into a sketchy page, change it immediately across all accounts.\n
 • Alert Your Bank: If you shared banking details, call your bank right away to freeze your cards.""")
 
 elif menu == "Phishing Drill":
