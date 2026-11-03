@@ -1,6 +1,6 @@
 #zia codes here
 import streamlit as st
-import mysql.connector
+#import mysql.connector
 
 def phishing_simulator():
     st.subheader("Security Alert Simulation")
