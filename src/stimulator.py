@@ -50,6 +50,8 @@ def save_failure_to_db():
 
         st.title("Class 12 Streamlit Project")
         st.write("Database connected successfully!")
+    finally: 
+        st.write("working so clear up")
 
 
 """
