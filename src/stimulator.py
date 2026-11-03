@@ -2,7 +2,7 @@
 import streamlit as st
 #import mysql.connector
 
-def phishing_simulator():
+def phishing_stimulator():
     st.subheader("Security Alert Simulation")
     
     # Fake email layout
