@@ -100,7 +100,7 @@ elif menu == "Learning":
 
 elif menu == "Phishing Drill":
     st.title("Live Phishing Drill")
-    st.write("zia fake phishing emails+buttons")
+    st.write(stimulator.phishing_stimulator())
 
 elif menu == "Quiz":
     st.title("Cybersecurity Quiz")
