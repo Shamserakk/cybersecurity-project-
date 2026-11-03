@@ -1,6 +1,6 @@
 #zia codes here
 import streamlit as st
-#import mysql.connector
+import mysql.connector
 
 def phishing_stimulator():
     st.subheader("Security Alert Simulation")
@@ -36,17 +36,23 @@ def handle_failure():
     # Call database function
     save_failure_to_db()
 
-"""def save_failure_to_db():
+def save_failure_to_db():
     try:
         # Connect to your MySQL database
+        # Streamlit will look for these values inside the hidden secrets.toml file
         db = mysql.connector.connect(
-            host="localhost",
-            user="root",
-            password="your_mysql_password",
-            database="phishing_project"
+        host=st.secrets["mysql"]["host"],
+        user=st.secrets["mysql"]["user"],
+        password=st.secrets["mysql"]["password"],
+        database=st.secrets["mysql"]["database"]
         )
         cursor = db.cursor()
+
+        st.title("Class 12 Streamlit Project")
+        st.write("Database connected successfully!")
+
         
+        """
         # SQL Insert Command
         query = "INSERT INTO drill_logs (action_type, status) VALUES (%s, %s)"
         values = ("Clicked Phishing Link", "Failed")
