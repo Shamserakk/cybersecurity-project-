@@ -39,12 +39,11 @@ def handle_failure():
 def save_failure_to_db():
     try:
         # Connect to your MySQL database
-        # Streamlit will look for these values inside the hidden secrets.toml file
         db = mysql.connector.connect(
-        host=st.secrets["mysql"]["host"],
-        user=st.secrets["mysql"]["user"],
-        password=st.secrets["mysql"]["password"],
-        database=st.secrets["mysql"]["database"]
+            host="localhost",
+            user="root",
+            password="your_mysql_password",
+            database="phishing_project"
         )
         cursor = db.cursor()
 
