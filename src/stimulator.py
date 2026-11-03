@@ -1,7 +1,6 @@
 #zia codes here
 import streamlit as st
-import mysql.connector
-
+from src.database_helper import get_db_connection
 def phishing_stimulator():
     st.subheader("Security Alert Simulation")
     
@@ -39,12 +38,7 @@ def handle_failure():
 def save_failure_to_db():
     try:
         # Connect to your MySQL database
-        db = mysql.connector.connect(
-            host="localhost",
-            user="root",
-            password="your_mysql_password",
-            database="phishing_project"
-        )
+        db = get_db_connection()
         cursor = db.cursor()
 
         # SQL Insert Command
