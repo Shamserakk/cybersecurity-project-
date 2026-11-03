@@ -30,8 +30,21 @@ def auth_page():
                 result = check_password(new_pass)
                 
                 if result == "Strong Password!":
-                    # PLACEHOLDER: We will add MySQL INSERT here later user is to be added into user table
-                    st.success(f"Account created for {new_user}!")
+                    #connect to database
+                    db=get_db_connection()
+                    if conn:
+                        cursor=db.cursor()
+                        try:
+                            query="insert into user(username,password) values (%s,%s)"
+                            values=(new_user,new_pass)
+                            cursor.execute(query,values)
+                            db.commit()
+                            st.success(f"Account created for {new_user}!")
+                        except Exception as e:
+                            st.error(f"ERROR:Username might already exist.")
+                        finally:
+                            cursor.close()
+                            db.close()
                 else:
                     st.warning(result)
 
@@ -46,4 +59,16 @@ def auth_page():
                 st.error("Please fill all fields.")
             else:
                 # PLACEHOLDER: We will add MySQL SELECT here later comparing username and password in the table with the given
-                st.info("Database connection pending... (Waiting for Person 1)")# st.success("login in successful")
+                db=get_db_connection()
+                if db:
+                    cursor=db.cursor()
+                    query="select * from users where username=%s and password=%s"
+                    values=(login_user,login_pass)
+                    cursor.execute(query,values)
+                    user=cursor.fetchone()
+                    cursor.close()
+                    db.close()
+                    if user:
+                        st.success(f"Welcome back,{login_user}!")
+                    else:
+                        st.error(Invalid Username or Password.)
