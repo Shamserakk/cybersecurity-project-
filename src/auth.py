@@ -10,7 +10,7 @@ def check_password(password):
     if not any(not ch.isalnum() for ch in password):
         return "Weak: Add a special symbol"
     return "Strong Password!"
-
+    
 # Main
 def auth_page():
     st.header("Account Access")
