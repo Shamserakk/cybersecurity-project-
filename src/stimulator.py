@@ -48,13 +48,6 @@ def save_failure_to_db():
         )
         cursor = db.cursor()
 
-        st.title("Class 12 Streamlit Project")
-        st.write("Database connected successfully!")
-    finally: 
-        st.write("working so clear up")
-
-
-"""
         # SQL Insert Command
         query = "INSERT INTO drill_logs (action_type, status) VALUES (%s, %s)"
         values = ("Clicked Phishing Link", "Failed")
@@ -67,4 +60,4 @@ def save_failure_to_db():
         st.info("Failure record logged to the database.")
         
     except Exception as e:
-        st.error(f"Database connection failed: {e}")"""
+        st.error(f"Database connection failed: {e}")
