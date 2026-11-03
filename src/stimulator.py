@@ -51,8 +51,8 @@ def save_failure_to_db():
         st.title("Class 12 Streamlit Project")
         st.write("Database connected successfully!")
 
-        
-        """
+
+"""
         # SQL Insert Command
         query = "INSERT INTO drill_logs (action_type, status) VALUES (%s, %s)"
         values = ("Clicked Phishing Link", "Failed")
