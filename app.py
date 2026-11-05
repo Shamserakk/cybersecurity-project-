@@ -14,7 +14,7 @@ if menu == "Home":
 
 elif menu == "Login/Sign in":
     st.title("Login/Sign in")
-    st.write(auth.auth_page())
+    auth.auth_page()
 
 elif menu == "Learning":
   st.title("Malware Learning Hub")
@@ -100,9 +100,9 @@ elif menu == "Learning":
 
 elif menu == "Phishing Drill":
     st.title("Live Phishing Drill")
-    st.write(stimulator.phishing_stimulator())
+    stimulator.phishing_stimulator()
 
 elif menu == "Quiz":
     st.title("Cybersecurity Quiz")
-    st.write("leena quiz+grading system")
+    quiz.run_quiz()
 
