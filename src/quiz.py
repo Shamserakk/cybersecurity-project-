@@ -59,7 +59,7 @@ def run_quiz():
             st.warning("Please answer all questions before submitting.")
         else:
             percentage = (score / len(questions)) * 100
-            st.success(f"🎉 Quiz Complete! Your Score: **{score} / {len(questions)}** ({percentage:.2f}%)")
+            st.success(f"Quiz Complete! Your Score: **{score} / {len(questions)}** ({percentage:.2f}%)")
             
             # 3. Save to Aiven Database
             conn = get_db_connection()
@@ -71,7 +71,7 @@ def run_quiz():
                     values = (user_id, score, len(questions), percentage)
                     cursor.execute(query, values)
                     conn.commit()
-                    st.info("💾 Score successfully saved to the database leaderboard!")
+                    st.info("Score successfully saved to the database leaderboard!")
                 except Exception as e:
                     st.error(f"Failed to save score: {e}")
                 finally:
