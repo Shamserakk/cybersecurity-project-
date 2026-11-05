@@ -71,4 +71,4 @@ def auth_page():
                     if user:
                         st.success(f"Welcome back,{login_user}!")
                     else:
-                        st.error(Invalid Username or Password.)
+                        st.error("Invalid Username or Password.")
