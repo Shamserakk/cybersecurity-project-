@@ -1,4 +1,4 @@
-mport streamlit as st
+import streamlit as st
 from src.database_helper import get_db_connection
 
 def phishing_simulator(user_id=1):
