@@ -2,7 +2,7 @@
 import streamlit as st
 from src.database_helper import get_db_connection
 
-def phishing_simulator():
+def phishing_stimulator():
     st.subheader("Live Phishing Drill")
     st.write("Select a simulation below and test your ability to spot a scam.")
     
@@ -40,7 +40,7 @@ def phishing_simulator():
             if st.button("Report Phishing", key="s1_report"):
                 st.success("Correct! You successfully identified the phishing attempt.")
 
-    # --- SCENARIO 2: Fake Password Reset (Your New Code) ---
+    # Fake Password Reset 
     elif scenario == "Scenario 2: The Fake Password Reset":
         st.markdown("""
         > **From:** support@paypaI-alerts.com  
