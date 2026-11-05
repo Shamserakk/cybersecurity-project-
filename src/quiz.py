@@ -2,7 +2,7 @@
 import streamlit as st
 from src.database_helper import get_db_connection
 
-def run_quiz():
+def run_quiz(user_id=1):
     st.subheader("Cybersecurity Quiz")
     
     # Fetch questions from database
