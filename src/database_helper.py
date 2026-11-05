@@ -3,7 +3,7 @@ import streamlit as st
 import mysql.connector
 import tempfile
 
-ca_cert="""
+CA_CERT="""
 -----BEGIN CERTIFICATE-----
 MIIERDCCAqygAwIBAgIUeGBTkdwKm45lmjDHuGf6MTGITpowDQYJKoZIhvcNAQEM
 BQAwOjE4MDYGA1UEAwwvMTc5YTdlZjAtN2JjYS00OTljLTk5MDktNDAxZDM0MTU3
