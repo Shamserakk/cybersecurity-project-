@@ -1,33 +1,28 @@
-
-import streamlit as st
+mport streamlit as st
 from src.database_helper import get_db_connection
 
 def run_quiz(user_id=1):
     st.subheader("Cybersecurity Quiz")
     
-    # Fetch questions from database
     conn = get_db_connection()
     if not conn:
-        return   
+        return
+        
     cursor = conn.cursor()
-  
     cursor.execute("SELECT quiz_id, question, option_a, option_b, option_c, option_d, correct_answer FROM quizzes")
     questions = cursor.fetchall()
-    
     cursor.close()
     conn.close()
     
     if not questions:
-        st.warning("No questions found in the database. Please check your SQL quizzes table.")
+        st.warning("No questions found in the database.")
         return
 
     user_answers = {}
     st.write("Answer the questions below:")
     
-    # Loop through database rows
     for q in questions:
         q_id, q_text, opt_a, opt_b, opt_c, opt_d, correct_opt = q
-        
         options = [f"A) {opt_a}", f"B) {opt_b}", f"C) {opt_c}", f"D) {opt_d}"]
         
         choice = st.radio(
@@ -37,14 +32,12 @@ def run_quiz(user_id=1):
             key=f"q_{q_id}"
         )
         
-        # Save the first letter (A, B, C, or D)
         user_answers[q_id] = {
             'chosen_code': choice[0] if choice else None,
             'correct_code': correct_opt
         }
         st.write("---")
         
-    # Grade and submit functionality
     if st.button("Submit Quiz", type="primary"):
         score = 0
         unanswered = False
@@ -59,14 +52,12 @@ def run_quiz(user_id=1):
             st.warning("Please answer all questions before submitting.")
         else:
             percentage = (score / len(questions)) * 100
-            st.success(f"Quiz Complete! Your Score: **{score} / {len(questions)}** ({percentage:.2f}%)")
+            st.success(f"🎉 Quiz Complete! Your Score: **{score} / {len(questions)}** ({percentage:.2f}%)")
             
-            # 3. Save to Aiven Database
             conn = get_db_connection()
             if conn:
                 cursor = conn.cursor()
                 try:
-                    # Updated to match Naja's scores table
                     query = "INSERT INTO scores (user_id, score, total_questions, percentage) VALUES (%s, %s, %s, %s)"
                     values = (user_id, score, len(questions), percentage)
                     cursor.execute(query, values)
