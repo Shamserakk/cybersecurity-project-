@@ -1,5 +1,5 @@
 import streamlit as st
-from src import auth, stimulator
+from src import auth, stimulator, quiz
 #setiing page
 st.set_page_config(page_title="Cybersecurity E-Learning Portal")
 #side bar
