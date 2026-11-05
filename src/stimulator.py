@@ -2,7 +2,7 @@
 import streamlit as st
 from src.database_helper import get_db_connection
 
-def phishing_simulator(user_id=1):
+def phishing_simulator():
     st.subheader("Live Phishing Drill")
     st.write("Select a simulation below and test your ability to spot a scam.")
     
