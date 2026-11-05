@@ -1,12 +1,10 @@
-#zia codes here
-import streamlit as st
+mport streamlit as st
 from src.database_helper import get_db_connection
 
-def phishing_stimulator(user_id=1):
-    st.subheader("Live Phishing Drill")
+def phishing_simulator(user_id=1):
+    st.subheader("🎣 Live Phishing Drill")
     st.write("Select a simulation below and test your ability to spot a scam.")
     
-    # Dropdown to choose the scenario
     scenario = st.selectbox(
         "Choose an Email to Analyze:",
         ["Scenario 1: The Fake Google Alert", 
@@ -16,7 +14,6 @@ def phishing_stimulator(user_id=1):
     
     st.divider()
 
-    # Fake Google Email
     if scenario == "Scenario 1: The Fake Google Alert":
         st.markdown("""
         > **From:** security@g00gle.com  
@@ -40,7 +37,6 @@ def phishing_stimulator(user_id=1):
             if st.button("Report Phishing", key="s1_report"):
                 st.success("Correct! You successfully identified the phishing attempt.")
 
-    # Fake Password Reset 
     elif scenario == "Scenario 2: The Fake Password Reset":
         st.markdown("""
         > **From:** support@paypaI-alerts.com  
@@ -63,7 +59,6 @@ def phishing_stimulator(user_id=1):
             if st.button("Report Phishing", key="s2_report"):
                 st.success("Spot on! This was a fake password reset request.")
 
-    # Legitimate Email 
     elif scenario == "Scenario 3: The Legitimate Notification":
         st.markdown("""
         > **From:** no-reply@accounts.google.com  
@@ -81,17 +76,13 @@ def phishing_stimulator(user_id=1):
             if st.button("Report Phishing", key="s3_report"):
                 st.warning("False Alarm! This email came from the official `@accounts.google.com` domain and doesn't ask you to click suspicious links.")
 
-# Helper Function to Handle Failures 
 def handle_failure(user_id, activity_name, red_flags):
     st.error("Oops! You fell for the trap.")
-    
     st.markdown("### Red Flags You Missed:")
     for flag in red_flags:
         st.markdown(f"* {flag}")
-        
     save_failure_to_db(user_id, activity_name)
 
-# Database Saver
 def save_failure_to_db(user_id, activity_name):
     conn = get_db_connection()
     if conn:
