@@ -1,5 +1,6 @@
 import streamlit as st
 from src import auth, stimulator, quiz
+from src.db_setup import create_tables
 #setiing page
 st.set_page_config(page_title="Cybersecurity E-Learning Portal")
 #side bar
@@ -105,4 +106,7 @@ elif menu == "Phishing Drill":
 elif menu == "Quiz":
     st.title("Cybersecurity Quiz")
     quiz.run_quiz()
+st.sidebar.divider()
+if st.sidebar.button("set up database(click once)"):
+  create_tables()
 
