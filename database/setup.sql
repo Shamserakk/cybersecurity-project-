@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS simulation_logs (
     FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
 );
 
-DELETE FROM quizzes;
+TRUNCATE FROM quizzes;
 
 #5. INSERT THE QUIZ QUESTIONS (From Naja)
 INSERT INTO quizzes (question, option_a, option_b, option_c, option_d, correct_answer, topic)
