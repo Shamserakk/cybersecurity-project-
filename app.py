@@ -7,8 +7,6 @@ st.set_page_config(page_title="Cybersecurity E-Learning Portal")
 # 1stlogin
 if "logged_in" not in st.session_state:
     st.session_state["logged_in"] = False
-if "user_id" not in st.session_state:
-    st.session_state["user_id"] = None
 
 # popping Login/Sign 
 if not st.session_state["logged_in"]:
