@@ -28,10 +28,6 @@ if menu == "Home":
  # st.write(" Project.")
   st.info("Use the sidebar on the left to navigate the portal.")
 
-elif menu == "Login/Sign in":
-    st.title("Login/Sign in")
-    auth.auth_page()
-
 elif menu == "Learning":
   st.title("Malware Learning Hub")
   st.write("To learn more click on any of the maliciuos program below...")
@@ -56,7 +52,7 @@ elif menu == "Learning":
   with st.expander("TROJAN HORSE "):
      st.write("A Trojan Horse is a fake computer program that tricks you into opening it so hackers can sneak in and steal your data.")
      #tab inside expander
-     tab1,tab2,tab3=st.tabs(["What is ransomwares?", "How to protect yourself", "What if..."])
+     tab1,tab2,tab3=st.tabs(["What is trojan horse?", "How to protect yourself", "What if..."])
      with tab1:
        st.write("""Trojan Horse (or Trojan) is a harmful computer program that tricks you by pretending to be something safe.Just like the famous wooden horse from Greek history, it hides malicious software inside a disguised file—like a fake game, a helpful software update, or an email attachment. Once you open it, the virus sneaks into your system, allowing hackers to spy on you, steal your passwords, or damage your computer""")
      with tab2:
@@ -72,11 +68,9 @@ elif menu == "Learning":
   #computer worm
   with st.expander("COMPUTER WORM "):
     st.write("A computer worm is a self-copying virus that automatically crawls from one device to another to slow down networks and damage files.")
-    tab1,tab2,tab3=st.tabs(["What is ransomwares?", "How to protect yourself", "What if..."])
+    tab1,tab2,tab3=st.tabs(["What is computer worm?", "How to protect yourself", "What if..."])
     with tab1:
-      st.write("""• Install Updates Immediately: Keep your operating system and apps updated to patch the network flaws worms use to travel.\n
-• Enable Your Firewall: A strong firewall acts as a digital shield, blocking unauthorized traffic and stopping worms from sneaking in.\n
-• Use Modern Antivirus: Ensure your security software is active and capable of scanning network traffic.is a harmful virus that copies itself and spreads automatically from device to device without you doing anything. Unlike a Trojan, which requires you to open it, a worm sneaks in through security loopholes in a network. Once inside, it travels quietly to other connected computers, slowing down networks and damaging files as it goes.""")
+        st.write("""A computer worm is a type of malware that copies itself and spreads across computer networks on its own, without needing a host file or human action.""")
     with tab2:
       st.write("""• Install Updates Immediately: Keep your operating system and apps updated to patch the network flaws worms use to travel.\n
 • Enable Your Firewall: A strong firewall acts as a digital shield, blocking unauthorized traffic and stopping worms from sneaking in.\n
@@ -89,7 +83,7 @@ elif menu == "Learning":
   #computer virus
   with st.expander("COMPUTER VIRUS"):
     st.write("A computer virus is a harmful program that hides inside normal files and spreads to other devices only when a user opens or shares the infected file.")
-    tab1,tab2,tab3=st.tabs(["What is ransomwares?", "How to protect yourself", "What if..."])
+    tab1,tab2,tab3=st.tabs(["What is virus?", "How to protect yourself", "What if..."])
     with tab1:
       st.write("""A computer virus is a harmful program that hitches a ride on safe files and needs you to open it to spread. Unlike a worm (which travels by itself), a virus is lazy—it hides inside an everyday file, like a document or a USB drive. It stays asleep until you click it open. Once activated, it copies itself into your other files, corrupts your data, and hitches a ride to other computers when you share files.""")
     with tab2:
@@ -103,7 +97,7 @@ elif menu == "Learning":
   #phishing
   with st.expander("PHISHING"):
     st.write("Phishing is when hackers send fake emails or texts to trick you into stealing your passwords or money.")
-    tab1,tab2,tab3=st.tabs(["What is ransomwares?", "How to protect yourself", "What if..."])
+    tab1,tab2,tab3=st.tabs(["What is phishing?", "How to protect yourself", "What if..."])
     with tab1:
       st.write("""Phishing is a scam where hackers trick you into giving up private information by pretending to be a company or person you trust. Instead of using sneaky code, it tricks human nature. Attackers send fake emails or texts that look exactly like your bank, a streaming service, or a delivery company. They create a false sense of urgency—claiming your account is locked or a package is missing—to scare you into clicking a link and typing your passwords or credit card details into a fake website.""")
     with tab2:
