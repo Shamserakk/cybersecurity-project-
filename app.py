@@ -3,10 +3,14 @@ from src import auth, stimulator, quiz
 from src.db_setup import create_tables
 #setiing page
 st.set_page_config(page_title="Cybersecurity E-Learning Portal")
+
+
 #side bar
 st.sidebar.title("Navigation")
 menu=st.sidebar.radio("Go to:",["Home","Learning","Phishing Drill","Quiz"])
 st.sidebar.button("log out")
+st.session_state("logged_in")=False
+st.rerun()
 
 #choice if else
 if menu == "Home":
