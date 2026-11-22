@@ -1,5 +1,5 @@
 import streamlit as st
-from src.database_helper import get_db_connection 
+import src.database_helper as db
 
 # Password Checker
 def check_password(password):
@@ -60,7 +60,7 @@ def auth_page():
             if login_user.strip() == "" or login_pass == "":
                 st.error("Please fill all fields.")
             else:
-                db=get_db_connection()
+                db=db.get_db_connection()
                 if db:
                     cursor=db.cursor()
                     query="select * from users where username=%s and password=%s"
