@@ -58,7 +58,6 @@ def auth_page():
             if login_user.strip() == "" or login_pass == "":
                 st.error("Please fill all fields.")
             else:
-                # PLACEHOLDER: We will add MySQL SELECT here later comparing username and password in the table with the given
                 db=get_db_connection()
                 if db:
                     cursor=db.cursor()
@@ -68,7 +67,12 @@ def auth_page():
                     user=cursor.fetchone()
                     cursor.close()
                     db.close()
-                    if user:
-                        st.success(f"Welcome back,{login_user}!")
-                    else:
-                        st.error("Invalid Username or Password.")
+
+
+if user:
+    st.success(f"Welcome back,{login_user}!")
+else:
+    st.error("Invalid Username or Password.")
+
+
+
