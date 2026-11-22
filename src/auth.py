@@ -1,5 +1,5 @@
 import streamlit as st
-from src.database_helper import get_db_connection
+from src.database_helper import get_db_connection()
 
 # Password Checker
 def check_password(password):
