@@ -7,6 +7,8 @@ st.set_page_config(page_title="Cybersecurity E-Learning Portal")
 # 1stlogin
 if "logged_in" not in st.session_state:
     st.session_state["logged_in"] = False
+if "user_id" not in st.session_state:
+    st.session_state["user_id"] = None
 
 # popping Login/Sign 
 if not st.session_state["logged_in"]:
@@ -110,11 +112,12 @@ elif menu == "Learning":
 
 elif menu == "Phishing Drill":
     st.title("Live Phishing Drill")
-    stimulator.phishing_stimulator()
+    stimulator.phishing_stimulator(st.session_state["user_id"])
 
 elif menu == "Quiz":
     st.title("Cybersecurity Quiz")
-    quiz.run_quiz()
+    quiz.run_quiz(st.session_state["user_id"])
+
 st.sidebar.divider()
 if st.sidebar.button("set up database(click once)"):
   create_tables()
