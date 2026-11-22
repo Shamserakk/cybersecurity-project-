@@ -9,7 +9,7 @@ st.set_page_config(page_title="Cybersecurity E-Learning Portal")
 st.sidebar.title("Navigation")
 menu=st.sidebar.radio("Go to:",["Home","Learning","Phishing Drill","Quiz"])
 st.sidebar.button("log out")
-st.session_state("logged_in")=False
+st.session_state["logged_in"]=False
 st.rerun()
 
 #choice if else
