@@ -4,6 +4,15 @@ from src.db_setup import create_tables
 #setiing page
 st.set_page_config(page_title="Cybersecurity E-Learning Portal")
 
+# 1stlogin
+if "logged_in" not in st.session_state:
+    st.session_state["logged_in"] = False
+
+# popping Login/Sign 
+if not st.session_state["logged_in"]:
+    st.title("Login / Sign in")
+    auth.auth_page()
+    st.stop()
 
 #side bar
 st.sidebar.title("Navigation")
