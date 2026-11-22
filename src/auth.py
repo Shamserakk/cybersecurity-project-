@@ -68,9 +68,16 @@ def auth_page():
                     cursor.execute(query,values)
                     user=cursor.fetchone()
                     cursor.close()
-                    db.close()
+                    db.close
+                    if user:
+                        st.session_state["logged_in"] = True
+                        st.session_state["user_id"] = user[0]
+                        st.session_state["username"] = user[1]
+                        st.rerun()
+
             if user:
-                st.success(f"Welcome back,{login_user}!")
+                st.success(f"{login_user}\nWelcome Back")
+                
             else:
                 st.error("Invalid Username or Password.")
 
