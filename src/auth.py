@@ -1,4 +1,6 @@
 import streamlit as st
+from src.database_helper import get_db_connection 
+
 # Password Checker
 def check_password(password):
     if len(password) < 8:
@@ -32,10 +34,10 @@ def auth_page():
                 if result == "Strong Password!":
                     #connect to database
                     db=get_db_connection()
-                    if conn:
+                    if db:
                         cursor=db.cursor()
                         try:
-                            query="insert into user(username,password) values (%s,%s)"
+                            query="insert into users(username,password) values (%s,%s)"
                             values=(new_user,new_pass)
                             cursor.execute(query,values)
                             db.commit()
@@ -67,12 +69,10 @@ def auth_page():
                     user=cursor.fetchone()
                     cursor.close()
                     db.close()
-
-
-if user:
-    st.success(f"Welcome back,{login_user}!")
-else:
-    st.error("Invalid Username or Password.")
+            if user:
+                st.success(f"Welcome back,{login_user}!")
+            else:
+                st.error("Invalid Username or Password.")
 
 
 
