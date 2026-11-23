@@ -1,11 +1,11 @@
-#1. USERS TABLE
+#USERS TABLE
 CREATE TABLE IF NOT EXISTS users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL
 );
 
-#2. QUIZZES TABLE (From Naja)
+#QUIZZES TABLE 
 CREATE TABLE IF NOT EXISTS quizzes (
     quiz_id INT AUTO_INCREMENT PRIMARY KEY,
     question TEXT NOT NULL,
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS quizzes (
     topic VARCHAR(100)
 );
 
-#3. SCORES TABLE (From Naja)
+#SCORES TABLE
 CREATE TABLE IF NOT EXISTS scores (
     score_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS scores (
     FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
 );
 
-#4. SIMULATION LOGS TABLE (For the Phishing Drill)
+#SIMULATION LOGS TABLE 
 CREATE TABLE IF NOT EXISTS simulation_logs (
     log_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
@@ -36,9 +36,9 @@ CREATE TABLE IF NOT EXISTS simulation_logs (
     FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
 );
 
-TRUNCATE TABLE quizzes; # naja delete to truncate
+TRUNCATE TABLE quizzes; 
 
-#5. INSERT THE QUIZ QUESTIONS (From Naja)
+#INSERT THE QUIZ QUESTIONS 
 INSERT INTO quizzes (question, option_a, option_b, option_c, option_d, correct_answer, topic)
 VALUES
 ('What is phishing?', 'A computer game', 'A trick to steal sensitive information', 'A programming language', 'A search engine', 'B', 'Phishing'),
