@@ -23,12 +23,12 @@ def run_quiz(user_id=1):
     for q in questions:
         q_id, q_text, opt_a, opt_b, opt_c, opt_d, correct_opt = q
         options = [f"A) {opt_a}", f"B) {opt_b}", f"C) {opt_c}", f"D) {opt_d}"]
-        #f"**Question:{q_id}** {q_text}"
+        #f"**Question:{q_id}** {q_text}"          f"q_{q_id}"
         choice = st.radio(
             label=q_text,
             options=options,
             index=None,
-            key=f"q_{q_id}"
+            key=q_id
         )
         
         user_answers[q_id] = {
