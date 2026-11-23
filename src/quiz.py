@@ -19,14 +19,13 @@ def run_quiz(user_id=1):
         return
 
     user_answers = {}
-    st.write("Answer the questions below:")
     
     for q in questions:
         q_id, q_text, opt_a, opt_b, opt_c, opt_d, correct_opt = q
         options = [f"A) {opt_a}", f"B) {opt_b}", f"C) {opt_c}", f"D) {opt_d}"]
-        
+        # {q_id}
         choice = st.radio(
-            label=f"**Question {q_id}:** {q_text}",
+            label=f"**Question:** {q_text}",
             options=options,
             index=None,
             key=f"q_{q_id}"
